@@ -1,47 +1,36 @@
 import styled from 'styled-components'
-import {Link, NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import DesktopNav from "./DesktopNav";
+import MobileMenu from "./MobileMenu";
 
-const HeaderStyles = styled.header`
+const StyledHeader = styled.header`
   background: var(--blue);
   color: #fff;
   font-weight: bold;
-  padding: 15px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   
   h1 {
     line-height: normal;
-    margin: 0;
-  }
-  
-  .header-nav {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;    
+    margin: 0;    
   }
   
   a {
-    text-decoration: none;
     color: #fff;
-    padding-left: 20px;
-    
-    &.is-active {
-      text-decoration: underline;
-    }
+    text-decoration: none;
   }
+  
+  
 `;
 
 export default function Header() {
   return (
-    <HeaderStyles>
-        <Link to="/"><h1>Super store</h1></Link>
-        <ul className="header-nav">
-          <li><NavLink exact to="/" activeClassName='is-active'>Home</NavLink ></li>
-          <li><NavLink to="/deals" activeClassName='is-active'>Deals</NavLink ></li>
-          <li><NavLink to="/cart" activeClassName='is-active'>Cart</NavLink ></li>
-        </ul>
-    </HeaderStyles>
+    <StyledHeader>
+      <Link to="/"><h1>Super store</h1></Link>
+      <DesktopNav />
+      <MobileMenu />
+    </StyledHeader>
   );
 }
