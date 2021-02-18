@@ -6,10 +6,10 @@ import {
 import {createGlobalStyle} from "styled-components";
 
 import Header from "./components/Header";
-import Home from "./components/Home";
-import Deals from "./components/Deals";
+import Home from "./components/pages/Home";
+import Deals from "./components/pages/Deals";
 import Cart from "./components/Cart";
-import ProductSingle from "./components/ProductSingle";
+import ProductSingle from "./components/pages/ProductSingle";
 
 const GlobalStyles = createGlobalStyle`  
   
@@ -36,6 +36,7 @@ const GlobalStyles = createGlobalStyle`
   
   .page-content {
     margin-top: 20px;
+    padding: 15px;
   }
 `;
 

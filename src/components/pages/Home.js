@@ -1,8 +1,8 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from 'react';
-import {setCurrentProducts} from "../store/features/productsSlice";
+import {setCurrentProducts} from "../../store/features/productsSlice";
 import axios from "axios";
-import ProductGrid from "./ProductGrid";
+import ProductGrid from "../ProductGrid";
 
 export default function Home() {
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import Button from "./Button";
+import Button from "../Button";
+import StarRating from "../StarRating/StarRating";
+import PropTypes from 'prop-types';
+
 // import css styles from another file
 import StyledProductCard from "./ProductCard.styled";
-import StarRating from "./StarRating";
 
 const ProductCard = ({product}) => {
   return (
@@ -23,4 +25,16 @@ const ProductCard = ({product}) => {
   );
 };
 
+ProductCard.propTypes= {
+  product: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    _id: PropTypes.string.isRequired,
+    price: PropTypes.number,
+    imageUrl: PropTypes.string,
+    isOnSale: PropTypes.bool
+  }),
+}
+
 export default ProductCard;
+
+

@@ -35,7 +35,7 @@ const StarRating = ({rating}) => {
 
   return (
     <div className="star-rating">
-      { convertNumberToStars(rating).map(star => star) }
+      { convertNumberToStars(rating) }
     </div>
   );
 };
