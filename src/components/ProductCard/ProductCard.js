@@ -17,7 +17,7 @@ const ProductCard = ({product}) => {
         <Link to={`/item/${product._id}`}>
           <h3>{product.name}</h3>
         </Link>
-        <StarRating rating={product.avgRating} />
+        <StarRating rating={product.avgRating} uniquekey={product._id}/>
         <p className="price">${product.price} {product.isOnSale && <span className="sale-label">On Sale</span>}</p>
       </div>
       <Button text='Add to Cart' url={`/item/${product._id}`} />
