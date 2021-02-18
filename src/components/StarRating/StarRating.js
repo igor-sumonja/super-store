@@ -7,6 +7,8 @@ const StarRating = ({rating, uniquekey}) => {
     let output = []
     const maxStars = 5
 
+    //TODO: maybe find better way to handle unique key here
+
     // calculation for start
     // for example rating is 4.5
     // truncate 4.5 to 4
